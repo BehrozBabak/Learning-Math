@@ -1,0 +1,81 @@
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>🦄 ریاضی‌بازی - موبایل</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#ff8bd1">
+</head>
+<body>
+  <div class="app" id="app" role="application" aria-label="ریاضی‌بازی موبایل">
+    <header class="topbar">
+      <div class="brand">
+        <div class="unicorn">🦄</div>
+        <div class="appname">ریاضی‌بازی</div>
+      </div>
+      <div class="top-controls">
+        <button id="btn-sound" class="icon-btn" aria-pressed="true">🔊</button>
+        <button id="btn-music" class="icon-btn">🎵</button>
+        <button id="btn-install" class="install-btn hidden">⬇️ نصب</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="panel left">
+        <h2>یادگیری</h2>
+        <div class="ops">
+          <button class="op big" data-op="جمع">➕</button>
+          <button class="op big" data-op="تفریق">➖</button>
+          <button class="op big" data-op="ضرب">✖️</button>
+          <button class="op big" data-op="تقسیم">➗</button>
+          <button class="op big" data-op="ترکیبی">🎯</button>
+        </div>
+
+        <h3>سطح</h3>
+        <div class="levels">
+          <button class="lvl" data-lvl="مبتدی" aria-pressed="true">مبتدی (0–9)</button>
+          <button class="lvl" data-lvl="متوسط" aria-pressed="false">متوسط (0–99)</button>
+          <button class="lvl" data-lvl="پیشرفته" aria-pressed="false">پیشرفته (0–99)</button>
+        </div>
+
+        <div class="toggles">
+          <label class="toggle"><input id="chk-show-shapes" type="checkbox" checked> نمایش تصویرسازی بزرگ</label>
+          <label class="toggle"><input id="chk-step-tutorial" type="checkbox"> راهنمای گام‌به‌گام</label>
+        </div>
+
+        <div class="scorebox">امتیاز: <span id="score">0</span></div>
+        <div class="actions">
+          <button id="btn-next" class="primary large">سؤال بعدی</button>
+          <button id="btn-exam" class="secondary large">📝 آزمون (۱۰ سوال)</button>
+        </div>
+      </div>
+
+      <div class="panel right">
+        <div id="badges" class="badges">
+          <span id="mode-badge">وضعیت: آزاد</span>
+          <span id="level-badge">سطح: مبتدی</span>
+        </div>
+
+        <div id="questioncard" class="questioncard">
+          <div id="qtext" class="qtext">سلام! یکی از عملیات را انتخاب کن.</div>
+          <div id="visual" class="visual"></div>
+        </div>
+
+        <div id="choices" class="choices"></div>
+        <div id="feedback" class="feedback"></div>
+      </div>
+    </main>
+
+    <footer class="footer">آفلاین بعد از نصب • صدای فارسی از فایل‌های محلی</footer>
+  </div>
+
+<script src="app_v5.js" defer></script>
+<script>
+if ('serviceWorker' in navigator){ window.addEventListener('load', ()=>{ navigator.serviceWorker.register('service-worker.js').catch(()=>{}); }); }
+</script>
+</body>
+</html>
