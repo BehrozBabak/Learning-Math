@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>🦄 ریاضی‌بازی - مدرسه حضرت رقیه</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#ff6fb5">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="unicorn">🦄</div>
+        <div class="brand-text">
+          <div class="appname">ریاضی‌بازی</div>
+          <div class="gift">هدیه به مدرسه ابتدایی حضرت رقیه(س) از طرف آرام صلواتچی</div>
+        </div>
+      </div>
+      <div class="top-controls">
+        <button id="btn-sound" class="icon-btn" aria-pressed="true">🔊</button>
+        <button id="btn-music" class="icon-btn" aria-pressed="false">🎵</button>
+        <button id="btn-install" class="install-btn hidden">⬇️ نصب</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="left panel">
+        <h2>یادگیری</h2>
+        <div class="ops">
+          <button class="op big" data-op="جمع">➕ جمع</button>
+          <button class="op big" data-op="تفریق">➖ تفریق</button>
+          <button class="op big" data-op="ضرب">✖️ ضرب</button>
+          <button class="op big" data-op="تقسیم">➗ تقسیم</button>
+          <button class="op big" data-op="ترکیبی">🎯 ترکیبی</button>
+        </div>
+
+        <h3>سطح</h3>
+        <div class="levels">
+          <button class="lvl" data-lvl="مبتدی" aria-pressed="true">🟢 مبتدی (۰–۹)</button>
+          <button class="lvl" data-lvl="متوسط" aria-pressed="false">🟡 متوسط (۰–۹۹)</button>
+          <button class="lvl" data-lvl="پیشرفته" aria-pressed="false">🔴 پیشرفته (۰–۱۰۰۰)</button>
+        </div>
+
+        <div class="toggles">
+          <label class="toggle"><input id="chk-show-shapes" type="checkbox" checked> نمایش تصویرسازی (فقط مبتدی)</label>
+          <label class="toggle"><input id="chk-step-tutorial" type="checkbox"> راهنمای گام‌به‌گام</label>
+        </div>
+
+        <div class="scorebox">امتیاز: <span id="score">۰</span></div>
+        <div class="actions">
+          <button id="btn-next" class="primary large">سؤال بعدی</button>
+          <button id="btn-exam" class="secondary large">📝 آزمون (۱۰ سوال)</button>
+        </div>
+      </aside>
+
+      <section class="right panel">
+        <div id="badges" class="badges"><span id="mode-badge">وضعیت: آزاد</span> <span id="level-badge">سطح: مبتدی</span></div>
+        <div id="questioncard" class="questioncard">
+          <div id="qtext" class="qtext">سلام! یکی از عملیات را انتخاب کن.</div>
+          <div id="visual" class="visual"></div>
+        </div>
+        <div id="choices" class="choices"></div>
+        <div id="feedback" class="feedback"></div>
+      </section>
+    </main>
+
+    <footer class="footer">هدیه به مدرسه ابتدایی حضرت رقیه(س) از طرف آرام صلواتچی</footer>
+  </div>
+
+<script src="app_v6.js" defer></script>
+<script>
+if ('serviceWorker' in navigator){ window.addEventListener('load', ()=>{ navigator.serviceWorker.register('service-worker.js').catch(()=>{}); }); }
+</script>
+</body>
+</html>
