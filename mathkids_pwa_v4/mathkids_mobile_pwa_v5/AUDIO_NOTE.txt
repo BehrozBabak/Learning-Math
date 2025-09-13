@@ -1,9 +1,0 @@
-
-توجه: برای صدای فارسی طبیعی، از generate_coqui.py استفاده کنید یا فایل‌های WAV ضبط شده را در پوشه sounds/ قرار دهید.
-فایل‌های موردنیاز (نام دقیق):
-- welcome.wav
-- correct.wav
-- wrong.wav
-- hint.wav
-- start_exam.wav
-- congrats.wav
