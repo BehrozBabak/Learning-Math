@@ -1,4 +1,7 @@
-# generate_coqui.py - requires TTS (Coqui) installed.
+
+# generate_coqui.py - تولید فایل‌های WAV فارسی با Coqui TTS
+# Usage: pip install TTS
+# Then run: python generate_coqui.py
 from TTS.api import TTS
 phrases = {
   "welcome":"سلام! من اسب تک‌شاخم، بیا با هم ریاضی‌بازی کنیم. آماده‌ای؟",

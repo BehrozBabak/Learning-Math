@@ -1,12 +1,12 @@
 {
-  "name": "ریاضی‌بازی - آموزش تعاملی چهار عمل",
+  "name": "ریاضی‌بازی - موبایل",
   "short_name": "ریاضی‌بازی",
   "lang": "fa",
   "dir": "rtl",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ff9ad8",
+  "theme_color": "#ff8bd1",
   "icons": [
     {
       "src": "icons/icon-192.png",
